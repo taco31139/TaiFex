@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/rounded_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_8sdp"
+    android:padding="@dimen/_6sdp">
+
+    <TextView
+        android:id="@+id/tvCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Code"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/_18ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Name"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCode" />
+
+    <TextView
+        android:id="@+id/tvOpenPriceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="開盤價"
+        style="@style/CustomTitleStyle"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+    <TextView
+        android:id="@+id/tvOpenPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tvOpenPrice"
+        style="@style/CustomContentStyle"
+        android:layout_marginStart="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOpenPriceName"
+        app:layout_constraintStart_toEndOf="@+id/tvOpenPriceName"
+        app:layout_constraintTop_toTopOf="@+id/tvOpenPriceName" />
+
+    <TextView
+        android:id="@+id/tvClosePriceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收盤價"
+        style="@style/CustomTitleStyle"
+        android:layout_marginStart="@dimen/_36sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvOpenPrice"
+        app:layout_constraintStart_toEndOf="@+id/tvOpenPrice"
+        app:layout_constraintTop_toTopOf="@+id/tvOpenPrice" />
+
+    <TextView
+        android:id="@+id/tvClosePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        style="@style/CustomContentStyle"
+        android:layout_marginStart="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvClosePriceName"
+        app:layout_constraintStart_toEndOf="@+id/tvClosePriceName"
+        app:layout_constraintTop_toTopOf="@+id/tvClosePriceName" />
+
+    <TextView
+        android:id="@+id/tvHighestPriceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最高價"
+        style="@style/CustomTitleStyle"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOpenPriceName" />
+
+    <TextView
+        android:id="@+id/tvHighestPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tvHighestPrice"
+        style="@style/CustomContentStyle"
+        app:layout_constraintStart_toStartOf="@id/tvOpenPrice"
+        app:layout_constraintTop_toTopOf="@+id/tvHighestPriceName" />
+
+    <TextView
+        android:id="@+id/tvLowestPriceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最低價"
+        style="@style/CustomTitleStyle"
+        app:layout_constraintStart_toStartOf="@id/tvClosePriceName"
+        app:layout_constraintTop_toTopOf="@+id/tvHighestPriceName" />
+
+    <TextView
+        android:id="@+id/tvLowestPrice"
+        style="@style/CustomContentStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tvHighestPrice"
+        app:layout_constraintBottom_toBottomOf="@+id/tvHighestPriceName"
+        app:layout_constraintStart_toStartOf="@id/tvClosePrice"
+        app:layout_constraintTop_toTopOf="@+id/tvHighestPriceName" />
+
+    <TextView
+        android:id="@+id/tvChangeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="漲跌價差"
+        style="@style/CustomTitleStyle"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHighestPriceName" />
+
+    <TextView
+        android:id="@+id/tvChange"
+        style="@style/CustomContentStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tvChange"
+        app:layout_constraintBottom_toBottomOf="@+id/tvChangeName"
+        app:layout_constraintStart_toStartOf="@id/tvHighestPrice"
+        app:layout_constraintTop_toTopOf="@+id/tvChangeName" />
+
+    <TextView
+        android:id="@+id/tvMonthlyAvgPriceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="月平均價"
+        style="@style/CustomTitleStyle"
+        app:layout_constraintStart_toStartOf="@id/tvLowestPriceName"
+        app:layout_constraintTop_toTopOf="@+id/tvChangeName" />
+
+    <TextView
+        android:id="@+id/tvMonthlyAvgPrice"
+        style="@style/CustomContentStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tvMonthlyAvgPrice"
+        app:layout_constraintBottom_toBottomOf="@+id/tvChangeName"
+        app:layout_constraintStart_toStartOf="@id/tvLowestPrice"
+        app:layout_constraintTop_toTopOf="@+id/tvChangeName" />
+
+
+    <TextView
+        android:id="@+id/tvTransactionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="成交筆數"
+        style="@style/CustomTitleStyle"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvTransaction"
+        app:layout_constraintTop_toBottomOf="@+id/tvChangeName" />
+
+    <TextView
+        android:id="@+id/tvTransaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="tvTransaction"
+        style="@style/CustomContentStyle"
+        app:layout_constraintEnd_toStartOf="@+id/tvTradeVolumeName"
+        app:layout_constraintStart_toEndOf="@+id/tvTransactionName"
+        app:layout_constraintBottom_toBottomOf="@id/tvTransactionName"
+        app:layout_constraintTop_toTopOf="@+id/tvTransactionName" />
+
+    <TextView
+        android:id="@+id/tvTradeVolumeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="成交股數"
+        style="@style/CustomTitleStyle"
+        app:layout_constraintEnd_toStartOf="@id/tvTradeVolume"
+        app:layout_constraintStart_toEndOf="@+id/tvTransaction"
+        app:layout_constraintBottom_toBottomOf="@id/tvTransactionName"
+        app:layout_constraintTop_toTopOf="@+id/tvTransactionName" />
+
+    <TextView
+        android:id="@+id/tvTradeVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="tvTradeVolume"
+        style="@style/CustomContentStyle"
+        app:layout_constraintEnd_toStartOf="@id/tvTradeValueName"
+        app:layout_constraintStart_toEndOf="@+id/tvTradeVolumeName"
+        app:layout_constraintBottom_toBottomOf="@id/tvTransactionName"
+        app:layout_constraintTop_toTopOf="@+id/tvTransactionName" />
+
+    <TextView
+        android:id="@+id/tvTradeValueName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="成交金額"
+        style="@style/CustomTitleStyle"
+        app:layout_constraintEnd_toStartOf="@+id/tvTradeValue"
+        app:layout_constraintStart_toEndOf="@+id/tvTradeVolume"
+        app:layout_constraintBottom_toBottomOf="@id/tvTransactionName"
+        app:layout_constraintTop_toTopOf="@+id/tvTransactionName" />
+
+    <TextView
+        android:id="@+id/tvTradeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="tvTradeValue"
+        style="@style/CustomContentStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTradeValueName"
+        app:layout_constraintBottom_toBottomOf="@id/tvTransactionName"
+        app:layout_constraintTop_toTopOf="@+id/tvTransactionName" />
+
+    <!-- Add other TextViews for the remaining fields as needed -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
